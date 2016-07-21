@@ -1,0 +1,129 @@
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\bin\Debug\ProjectionChants.exe.config
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionChants.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\MainWindow.baml
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionWindow.baml
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\MainWindow.g.cs
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionWindow.g.cs
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\App.g.cs
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.cache
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionChants.g.resources
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionChants.Properties.Resources.resources
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionChants.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\bin\Debug\ProjectionChants.exe
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\bin\Debug\ProjectionChants.pdb
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionChants.exe
+D:\Documents\Visual Studio 2012\Projects\ProjectionChants\obj\Debug\ProjectionChants.pdb
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.config
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.pdb
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csprojResolveAssemblyReference.cache
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.baml
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.baml
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.g.cs
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.g.cs
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\App.g.cs
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.cache
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.g.resources
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.Properties.Resources.resources
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csproj.GenerateResource.Cache
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.pdb
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.config
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.pdb
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.pdb
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\bin\Debug\wpftoolkit.extended.dll
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.baml
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\NewWindow.baml
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.baml
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.g.cs
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\NewWindow.g.cs
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.g.cs
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\App.g.cs
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.cache
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.g.resources
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.Properties.Resources.resources
+D:\Documents\Visual Studio 2012\Projects\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csproj.GenerateResource.Cache
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.lref
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\bin\Debug\wpftoolkit.dll
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\bin\Debug\wpftoolkit.pdb
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.manifest
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.application
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe.manifest
+C:\Users\Ludovic\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.application
+D:\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.config
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.pdb
+D:\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.manifest
+D:\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.application
+D:\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe
+D:\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.pdb
+D:\Projection de Chants\ProjectionChants\bin\Debug\wpftoolkit.dll
+D:\Projection de Chants\ProjectionChants\bin\Debug\wpftoolkit.pdb
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csprojResolveAssemblyReference.cache
+D:\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.g.cs
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.g.cs
+D:\Projection de Chants\ProjectionChants\obj\Debug\App.g.cs
+D:\Projection de Chants\ProjectionChants\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.cache
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.lref
+D:\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.baml
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.baml
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.g.resources
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.Properties.Resources.resources
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csproj.GenerateResource.Cache
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe.manifest
+D:\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.application
+D:\Projection de Chants\ProjectionChants\obj\Debug\PrintListWindow.baml
+D:\Projection de Chants\ProjectionChants\obj\Debug\PrintListWindow.g.cs
+D:\Perso\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.config
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.pdb
+D:\Perso\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.manifest
+D:\Perso\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.application
+D:\Perso\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe
+D:\Perso\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.pdb
+D:\Perso\Projection de Chants\ProjectionChants\bin\Debug\wpftoolkit.pdb
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csprojResolveAssemblyReference.cache
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\PrintListWindow.baml
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.g.cs
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\PrintListWindow.g.cs
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.g.cs
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\App.g.cs
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.cache
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.lref
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.baml
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.baml
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.g.resources
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.Properties.Resources.resources
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csproj.GenerateResource.Cache
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe.manifest
+D:\Perso\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.application
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.config
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.pdb
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe.manifest
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.application
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.exe
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\bin\Debug\wpftoolkit.pdb
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csprojResolveAssemblyReference.cache
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\PrintListWindow.baml
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.g.cs
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\PrintListWindow.g.cs
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.g.cs
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\App.g.cs
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.cache
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants_MarkupCompile.lref
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\MainWindow.baml
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionWindow.baml
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.g.resources
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.Properties.Resources.resources
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.csproj.GenerateResource.Cache
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.exe.manifest
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\obj\Debug\ProjectionChants.application
+D:\hubiC\Sources\Projection de Chants\ProjectionChants\bin\Debug\ProjectionChants.pdb

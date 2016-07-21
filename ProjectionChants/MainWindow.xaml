@@ -1,0 +1,253 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:local="clr-namespace:ProjectionChants" 
+        xmlns:tk="http://schemas.microsoft.com/wpf/2008/toolkit" x:Name="mainWindow" mc:Ignorable="d" x:Class="ProjectionChants.MainWindow" Height="768" Width="1024" WindowState="Maximized" DataContext="{DynamicResource myDataContext}" FontStretch="ExtraExpanded" UseLayoutRounding="False" FontSize="20" Loaded="mainWindow_Loaded" Icon="projection.ico" Unloaded="mainWindow_Unloaded" MinWidth="1024" Background="#FFC7D2E4" Topmost="True">
+    <Window.Resources>
+        <local:InverseBooleanConverter x:Key="InverseBoolConverter"/>
+        <local:UserDataContext x:Key="myDataContext"/>
+        <local:BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>
+        <Storyboard x:Key="closeCommands">
+            <DoubleAnimation Storyboard.TargetName="transformCommandScale" Storyboard.TargetProperty="ScaleY" To="0" Duration="0:0:0.5" />
+        </Storyboard>
+        <Storyboard x:Key="openCommands">
+            <DoubleAnimation Storyboard.TargetName="transformCommandScale" Storyboard.TargetProperty="ScaleY" To="1" Duration="0:0:0.5" />
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="337*" MinWidth="300"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="627*"/>
+            <ColumnDefinition Width="0"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <tk:DataGrid x:Name="gridChants" KeyboardNavigation.TabNavigation="Once" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Margin="0,0,0,0" FontSize="16" FontStyle="Italic" IsReadOnly="True" RowBackground="White" AlternatingRowBackground="#FFF1F1F1" SelectedIndex="0" SelectedCellsChanged="gridChants_SelectedCellsChanged" CanUserResizeRows="False" SelectionMode="Single" IsTextSearchEnabled="True" IsTabStop="True" TabIndex="4" Sorting="gridChants_Sorting" Background="{x:Null}" BorderBrush="{x:Null}">
+            <tk:DataGrid.Resources>
+                <Style  x:Key="SelectableCellStyle" TargetType="{x:Type tk:DataGridCell}">
+                    <Setter Property="KeyboardNavigation.IsTabStop" Value="False" />
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="KeyboardNavigation.IsTabStop" Value="True" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </tk:DataGrid.Resources>
+            <tk:DataGrid.HorizontalGridLinesBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InactiveCaptionTextColorKey}}"/>
+            </tk:DataGrid.HorizontalGridLinesBrush>
+            <tk:DataGrid.VerticalGridLinesBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InactiveCaptionTextColorKey}}"/>
+            </tk:DataGrid.VerticalGridLinesBrush>
+            <tk:DataGrid.IsEnabled>
+                <Binding Converter="{StaticResource InverseBoolConverter}" Path="modeEdition"/>
+            </tk:DataGrid.IsEnabled>
+            <tk:DataGrid.CellStyle>
+                <Style TargetType="{x:Type tk:DataGridCell}">
+                    <Setter Property="KeyboardNavigation.IsTabStop" Value="False" />
+                </Style>
+            </tk:DataGrid.CellStyle>
+            <tk:DataGrid.Columns>
+                <tk:DataGridTextColumn x:Name="numero" Binding="{Binding numero}" ClipboardContentBinding="{x:Null}" Header="N°" Width="40" CellStyle="{DynamicResource SelectableCellStyle}"/>
+                <tk:DataGridTextColumn x:Name="nom" Binding="{Binding nom}" ClipboardContentBinding="{x:Null}" Header="Titre" Width="*" />
+                <tk:DataGridTextColumn x:Name="theme" Binding="{Binding theme}" ClipboardContentBinding="{x:Null}" Header="Thème" Width="85" />
+                <tk:DataGridTextColumn x:Name="cle" Binding="{Binding cle}" ClipboardContentBinding="{x:Null}" Header="Clé" Width="35"/>
+            </tk:DataGrid.Columns>
+        </tk:DataGrid>
+        <StackPanel x:Name="stackCommand" Margin="0" Grid.Row="1" VerticalAlignment="Top" Background="Red" RenderTransformOrigin="0,0" Height="170">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="transformCommandScale"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <StackPanel Orientation="Horizontal" Height="60" HorizontalAlignment="Center">
+                <Button x:Name="buttonSave" ToolTip="Enregistrer" Click="buttonSave_Click" IsTabStop="False" VerticalAlignment="Center">
+                    <Image Source="Images/save.png" Width="32" Height="32" />
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard Storyboard="{StaticResource closeCommands}"/>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <Button x:Name="buttonCancel" ToolTip="Annuler" Click="buttonCancel_Click" IsTabStop="False" VerticalAlignment="Center" Margin="20,0,0,0">
+                    <Image Source="Images/round_delete.png" Width="32" Height="32" />
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard Storyboard="{StaticResource closeCommands}"/>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <Button x:Name="buttonDelete" ToolTip="Supprimer" IsTabStop="False" VerticalAlignment="Center" Margin="20,0,0,0" Click="buttonDelete_Click">
+                    <Image Source="Images/trash.png" Width="32" Height="32" />
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard Storyboard="{StaticResource closeCommands}"/>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+            </StackPanel>
+            <Separator Height="9" Margin="0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <Image Height="32" Width="32" Source="Images/text_letter_t.png"/>
+                <ComboBox x:Name="_fontFamily" IsEditable="True" SelectionChanged="FontFamily_SelectionChanged" Width="200"/>
+                <Image Height="32" Width="32" Source="Images/font_size.png" Margin="10,0,0,0"/>
+                <ComboBox x:Name="_fontSize" Width="50" IsEditable="True" SelectionChanged="FonSize_SelectionChanged" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <ToggleButton x:Name="_btnBold" Command="{x:Static EditingCommands.ToggleBold}" CommandTarget="{Binding SelectedRtb}">
+                    <Image Source="Images/font_bold.png" Width="32" Height="32" />
+                </ToggleButton>
+                <ToggleButton x:Name="_btnItalic" Command="{x:Static EditingCommands.ToggleItalic}" CommandTarget="{Binding SelectedRtb}">
+                    <Image Source="Images/font_italic.png" Width="32" Height="32" />
+                </ToggleButton>
+                <ToggleButton x:Name="_btnUnderline" Command="{x:Static EditingCommands.ToggleUnderline}" CommandTarget="{Binding SelectedRtb}">
+                    <Image Source="Images/font_underline.png" Width="32" Height="32" />
+                </ToggleButton>
+                <ToggleButton x:Name="_btnBullets" Command="{x:Static EditingCommands.ToggleBullets}" CommandTarget="{Binding SelectedRtb}" Margin="10,0,0,0">
+                    <Image Source="Images/list_bullets.png" Width="32" Height="32" />
+                </ToggleButton>
+                <ToggleButton x:Name="_btnNumbers" Command="{x:Static EditingCommands.ToggleNumbering}" CommandTarget="{Binding SelectedRtb}">
+                    <Image Source="Images/list_num.png" Width="32" Height="32" />
+                </ToggleButton>
+                <ToggleButton x:Name="_btnAlignLeft" Command="{x:Static EditingCommands.AlignLeft}" CommandTarget="{Binding SelectedRtb}" Margin="10,0,0,0">
+                    <Image Source="Images/align_left.png" Width="32" Height="32" />
+                </ToggleButton>
+                <ToggleButton x:Name="_btnAlignCenter" Command="{x:Static EditingCommands.AlignCenter}" CommandTarget="{Binding SelectedRtb}">
+                    <Image Source="Images/align_center.png" Width="32" Height="32" />
+                </ToggleButton>
+                <ToggleButton x:Name="_btnAlignRight" Command="{x:Static EditingCommands.AlignRight}" CommandTarget="{Binding SelectedRtb}">
+                    <Image Source="Images/align_right.png" Height="32" Width="32" />
+                </ToggleButton>
+            </StackPanel>
+        </StackPanel>
+        <GridSplitter Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" Width="5" ResizeBehavior="PreviousAndNext" IsTabStop="False" Background="#FFC7D2E4"/>
+        <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" Margin="0" HorizontalAlignment="Left" Width="890">
+            <Button x:Name="ajouterChant" Click="ajouterChant_Click" IsEnabled="{Binding modeEdition, Converter={StaticResource InverseBoolConverter}}" VerticalAlignment="Center" ToolTip="Ajouter un chant" IsTabStop="False" Margin="10,0,0,0">
+                <Image Source="Images/round_plus.png" Height="32" Width="32" />
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </Button.Effect>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard Storyboard="{StaticResource openCommands}"/>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            <Button x:Name="modifierChant" Click="modifierChant_Click" IsEnabled="{Binding modeEdition, Converter={StaticResource InverseBoolConverter}}" VerticalAlignment="Center" ToolTip="Modifier ce chant" IsTabStop="False" Margin="5,0,0,0">
+                <Image Source="Images/pencil.png" Height="32" Width="32" />
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </Button.Effect>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard Storyboard="{StaticResource openCommands}"/>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            <TextBox x:Name="textNumero" Width="50" Height="35" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Center" Text="{Binding Numero}" GotFocus="textBoxSelectionOnGotFocus" TabIndex="0" Margin="10,0,0,0" PreviewKeyDown="textNumero_PreviewKeyDown">
+                <TextBox.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="textTitre" Width="380" Height="35" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Center" Text="{Binding Titre}" GotFocus="textBoxSelectionOnGotFocus" TabIndex="1">
+                <TextBox.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Thème :" Margin="10,0,0,0" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Center">
+                <Label.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </Label.Effect>
+            </Label>
+            <ComboBox x:Name="comboTheme" Width="165" FontWeight="Bold" FontStyle="Italic" IsEditable="True" IsSynchronizedWithCurrentItem="True" Text="{Binding Theme}" VerticalAlignment="Center" Height="35" GotFocus="comboTheme_GotFocus" IsTabStop="True" TabIndex="2">
+                <ComboBox.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </ComboBox.Effect>
+            </ComboBox>
+            <Label Content="Clé :" Margin="10,0,0,0" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Center">
+                <Label.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </Label.Effect>
+            </Label>
+            <TextBox x:Name="textCle" Width="40" FontWeight="Bold" FontStyle="Italic" Text="{Binding Cle}" VerticalAlignment="Center" Height="35" GotFocus="textBoxSelectionOnGotFocus" TabIndex="3">
+                <TextBox.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </TextBox.Effect>
+            </TextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal" Grid.ColumnSpan="2">
+            <Menu x:Name="menuOptions" IsMainMenu="False" VerticalAlignment="Center">
+                <Menu.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </Menu.Effect>
+                <MenuItem Header="Menu">
+                    <MenuItem x:Name="menuChooseList" Header="Choisir une liste" Click="menuChooseList_Click"/>
+                    <Separator />
+                    <MenuItem x:Name="menuStopProjection" Header="Arrêter la projection" IsTabStop="False" IsCheckable="True" Checked="menuStopProjection_Checked" Unchecked="menuStopProjection_Unchecked"/>
+                    <MenuItem x:Name="menuShowTab" Header="Afficher les tablatures" IsTabStop="False" IsCheckable="True" IsChecked="{Binding isTabVisible}"/>
+                    <MenuItem x:Name="menuPrintList" Header="Imprimer la liste" IsTabStop="False" Click="menuPrintList_Click"/>
+                </MenuItem>
+            </Menu>
+            <Button x:Name="buttonProjection" VerticalAlignment="Center" BorderThickness="1" FontWeight="Bold" FontStyle="Italic" TabIndex="5" Click="buttonProjection_Click" IsEnabled="{Binding IsChecked, Converter={StaticResource InverseBoolConverter}, ElementName=menuStopProjection}" Width="38" Margin="10,0">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </Button.Effect>
+                <Image Source="Images/preso.png" Width="32" Height="32" />
+            </Button>
+        </StackPanel>
+        <Viewbox x:Name="viewParoles" Grid.Row="1" Grid.Column="2">
+            <Grid x:Name="gridParoles" Width="1024" Height="768" UseLayoutRounding="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{Binding RefrainLength, Mode=TwoWay}" MaxHeight="{Binding Parent.Height, RelativeSource={RelativeSource Self}}"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="gridRefrain" UseLayoutRounding="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="{Binding RefrainTabLength, Mode=TwoWay}" MaxWidth="{Binding Parent.Width, RelativeSource={RelativeSource Self}}"/>
+                    </Grid.ColumnDefinitions>
+                    <RichTextBox x:Name="rtbRefrain" AcceptsTab="True" FontSize="20" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TabIndex="6" Focusable="{Binding modeEdition}" SelectionChanged="rtb_SelectionChanged" GotFocus="rtb_GotFocus" SpellCheck.IsEnabled="{Binding modeEdition}" BorderThickness="0" Loaded="rtbRefrain_Loaded">
+                        <FlowDocument Language="fr-fr" LineHeight="1">
+                            <Paragraph/>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <GridSplitter x:Name="rtbRefrainSplitter" Grid.Column="1" HorizontalAlignment="Stretch" Width="5" IsTabStop="False" Background="#FFC7D2E4" IsEnabled="{Binding modeEdition}" Visibility="{Binding modeEdition, Converter={StaticResource booleanToVisibilityConverter}}"/>
+                    <RichTextBox x:Name="rtbRefrainTab" Grid.Column="2" AcceptsTab="True" FontStretch="Normal" FontSize="20" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" RenderTransformOrigin="0,0" BorderThickness="0" TabIndex="6" Focusable="{Binding modeEdition}" SelectionChanged="rtb_SelectionChanged" GotFocus="rtb_GotFocus" SpellCheck.IsEnabled="{Binding modeEdition}">
+                        <FlowDocument Language="fr-fr" LineHeight="1">
+                            <Paragraph/>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+                <GridSplitter x:Name="rtbSplitter" HorizontalAlignment="Stretch" Height="5" IsTabStop="False" Background="#FFC7D2E4" IsEnabled="{Binding modeEdition}" Visibility="{Binding modeEdition, Converter={StaticResource booleanToVisibilityConverter}}" Grid.Row="1"/>
+                <Grid x:Name="gridCouplet" Grid.Row="2" UseLayoutRounding="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="{Binding CoupletTabLength, Mode=TwoWay}"/>
+                    </Grid.ColumnDefinitions>
+                    <RichTextBox x:Name="rtbCouplet" AcceptsTab="True" SpellCheck.IsEnabled="{Binding modeEdition}" FontStretch="Normal" FontSize="20" BorderBrush="#FFD48F8F" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" RenderTransformOrigin="0,0" BorderThickness="0" Loaded="rtbCouplet_Loaded" TabIndex="7" Focusable="{Binding modeEdition}" SelectionChanged="rtb_SelectionChanged" GotFocus="rtb_GotFocus">
+                        <FlowDocument Language="fr-fr" LineHeight="1">
+                            <Paragraph/>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <GridSplitter x:Name="rtbCoupletSplitter" Grid.Column="1" HorizontalAlignment="Stretch" Width="5" IsTabStop="False" Background="#FFC7D2E4" IsEnabled="{Binding modeEdition}" Visibility="{Binding modeEdition, Converter={StaticResource booleanToVisibilityConverter}}"/>
+                    <RichTextBox x:Name="rtbCoupletTab" Grid.Column="2" AcceptsTab="True" SpellCheck.IsEnabled="{Binding modeEdition}" FontStretch="Normal" FontSize="20" BorderBrush="#FFD48F8F" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" RenderTransformOrigin="0,0" BorderThickness="0" TabIndex="7" Focusable="{Binding modeEdition}" SelectionChanged="rtb_SelectionChanged" GotFocus="rtb_GotFocus">
+                        <FlowDocument Language="fr-fr" LineHeight="1">
+                            <Paragraph/>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
